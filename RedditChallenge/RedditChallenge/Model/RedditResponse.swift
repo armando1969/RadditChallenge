@@ -8,23 +8,23 @@
 import Foundation
 
 
-struct RedditResponse {
+struct RedditResponse: Codable {
     
     let kind: String
     let data: RedditData
 }
 
-struct RedditData {
+struct RedditData: Codable {
     let after: String
     let children: [Child]
 }
 
-struct Child {
+struct Child: Codable {
     let kind: String
     let data: Story
 }
 
-struct Story {
+struct Story: Codable {
     let title: String
     let thumbnail: String
     let thumbnailHeight: Int?

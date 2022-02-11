@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet private var tableView: UITableView!
+    private let viewModel = ViewModel()
+    
+  //  @IBOutlet private var tableView: UITableView!
     
     private var tableView2: UITableView = {
         let tableView2 = UITableView()
@@ -49,6 +51,10 @@ class ViewController: UIViewController {
         tableView2.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         tableView2.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         tableView2.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor,constant: -20).isActive = true
+    }
+    
+    private func binding() {
+        
     }
 }
 
